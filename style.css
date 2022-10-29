@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+
+}
+
+img{
+    max-width: 100%;
+}
+/* ******* 
+Typography 
+********** */
+
+h1{
+    margin: 0;
+    font-weight: 800;
+    /* font-size: 18px; */
+    /* line-height: 24px; */
+    /* size: 42px; */
+}
+
+h3{
+    margin: 0;
+    font-weight: 700;
+    /* line-height: 20px; */
+    /* size: 14px; */
+}
+/* ******* 
+Layout 
+********** */
+
+.container{
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+header{
+    padding: 0 1em;
+    background-image: url('./icons/unsplash.jpg');
+    background-position:50% 25%;
+    background-size: cover;
+    background-blend-mode:multiply;
+    min-height: 30vh;
+    background-color: #404040;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* 
+#input-div img{
+    max-width: 20px;
+} */
+
+main{
+    height: 70vh;
+    /* background-color: magenta; */
+    padding: 0 1em;
+
+}
+
+#input-div{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-div input{
+    background-image: url(./icons/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode:exclusion;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px 0px 0px 6px;
+    /* padding-left:30px; */
+    width: 70%;
+    padding: 0.5em 1em 0.5em 3em;
+    margin-top: -3em;
+}
+#search-btn{
+    padding: 0.5em 1.25em;
+    background: #F9FAFB;
+    /* gray/300 */
+    border: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+    margin-top: -3em;
+}
+#movies-div{
+    /* background-color: aquamarine; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+
+}
+#movies-div h3{
+    margin-top: 0.5em;
+    color: #DFDDDD;
+}
