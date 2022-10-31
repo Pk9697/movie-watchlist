@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -27,6 +30,28 @@ h3{
     /* line-height: 20px; */
     /* size: 14px; */
 }
+
+h2{
+    margin: 0;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h2>span,.movie-type>p{
+    font-weight: 400;
+    color: #111827;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+p{
+    color: #6B7280;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
 /* ******* 
 Layout 
 ********** */
@@ -43,7 +68,7 @@ header{
     background-position:50% 25%;
     background-size: cover;
     background-blend-mode:multiply;
-    min-height: 30vh;
+    height: 30vh;
     background-color: #404040;
     color: #ffffff;
     display: flex;
@@ -78,7 +103,7 @@ main{
     /* padding-left:30px; */
     width: 70%;
     padding: 0.5em 1em 0.5em 3em;
-    margin-top: -3em;
+    margin-top: -3.5em;
 }
 #search-btn{
     padding: 0.5em 1.25em;
@@ -86,19 +111,84 @@ main{
     /* gray/300 */
     border: 1px solid #D1D5DB;
     border-radius: 0px 6px 6px 0px;
-    margin-top: -3em;
+    margin-top: -3.5em;
+    cursor: pointer;
 }
 #movies-div{
     /* background-color: aquamarine; */
     height: 90%;
+
+}
+#movies-start{
+    height: 100%;
+    background-color: magenta;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #ffffff;
-
 }
-#movies-div h3{
+#movies-start h3{
     margin-top: 0.5em;
     color: #DFDDDD;
+    max-width: 350px;
+    text-align: center;
+}
+.movie-poster{
+    border: 1px solid;
+    width: 100px;
+    height: calc(100px*3/2);
+    /* width: 70%; */
+    background-color: orange;
+}
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+}
+
+.movie-body{
+    /* background-color: magenta; */
+    width: 80%;
+}
+.movie-card{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    border-bottom: 1.5px solid #E5E7EB;
+    margin-bottom: 2em;
+}
+/* .movie-header h2{
+    margin-top: 0;
+    margin-bottom: 0;
+} */
+.movie-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+}
+.movie-type{
+    display: flex;
+    align-items: center;
+}
+.movie-details,.movie-type p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.movie-watchlist-div button{
+    border: none; 
+    background: #ffffff;
+    /* padding: 0.3em; */
+}
+.movie-watchlist-div img{
+    max-width: 20px;
+    border-radius: 50%;
+    /* padding: 0;
+    margin: 0; */
+}
+.movie-watchlist-div{
+    margin-left: 20px;
+    display: flex;
 }
