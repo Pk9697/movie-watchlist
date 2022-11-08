@@ -1,7 +1,20 @@
 // import { watchListData } from "./index.js";
 // console.log(watchListData);
 console.log("watchlist.js loaded");
-const watchListData=localStorage.getItem('watchListData')?JSON.parse(localStorage.getItem('watchListData')):[];
+let watchListData=localStorage.getItem('watchListData')?JSON.parse(localStorage.getItem('watchListData')):[];
+
+document.addEventListener('click',function(e){
+    if(e.target.dataset.removefromwatchlist){
+        removeFromWatchlist(e.target.dataset.removefromwatchlist)
+    }
+})
+
+function removeFromWatchlist(imdbID){
+    watchListData=watchListData.filter(watchlist=>watchlist.imdbID!==imdbID)
+    renderWatchlist()
+    localStorage.setItem('watchListData',JSON.stringify(watchListData))
+}
+
 function renderWatchlist(){
     const moviesHtml=watchListData.map(movie=>{
         return `
@@ -15,9 +28,9 @@ function renderWatchlist(){
                 </div>
                 <div class="movie-type">
                     <p>${movie.Runtime} <span>${movie.Genre}</span></p>
-                    <div class="movie-watchlist-div" data-addtowatchlist=${movie.imdbID}>
-                        <img class="addimg" src="./icons/plus.png" alt="" data-addtowatchlist=${movie.imdbID}>
-                        <button class="addbtn" data-addtowatchlist=${movie.imdbID}> Watchlist</button>
+                    <div class="movie-watchlist-div" data-removefromwatchlist=${movie.imdbID}>
+                        <img class="addimg" src="./icons/minus.png" alt="" data-removefromwatchlist=${movie.imdbID}>
+                        <button class="addbtn" data-removefromwatchlist=${movie.imdbID}> Remove</button>
                     </div>
                 </div>
                 <p class="movie-details">
@@ -27,7 +40,20 @@ function renderWatchlist(){
         </div>
         `
     }).join('')
-    document.getElementById('movies-div').innerHTML=moviesHtml
+
+    if(watchListData.length===0){
+        document.getElementById('movies-div').innerHTML=`
+        <div id="movies-start">
+            <h3>Your watchlist is looking a little empty...</h3>
+            <div class="movie-watchlist-div">
+                <img src="./icons/plus.png" alt="">
+                <a href="./index.html">Let's add some movies!</a>
+            </div>
+        </div>
+        `
+    }else{
+        document.getElementById('movies-div').innerHTML=moviesHtml
+    }
 
 }
 renderWatchlist()

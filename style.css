@@ -127,7 +127,7 @@ main{
 #movies-div{
     /* background-color: aquamarine; */
     height: 90%;
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 #movies-start{
     /* height: 100%; */
@@ -166,9 +166,9 @@ main{
     /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2em;
+    padding: 2em 0;
     border-bottom: 1.5px solid #E5E7EB;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 /* .movie-header h2{
     margin-top: 0;
@@ -205,6 +205,10 @@ main{
     margin-left: 20px;
     display: flex;
     cursor: pointer;
+}
+
+.movie-watchlist-div > img{
+    width: 18px;
 }
 
 .btn-disable{

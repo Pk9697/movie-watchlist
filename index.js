@@ -46,13 +46,13 @@ async function search(){
     const inputValue=inputBox.value;
     if(inputValue){
 
-        const promise=await fetch(`http://www.omdbapi.com/?s=${inputValue}&apikey=61e4be91`)
+        const promise=await fetch(`https://www.omdbapi.com/?s=${inputValue}&apikey=61e4be91`)
         const data=await promise.json()
         console.log(data)
         if(data.Response==="True"){
 
             for(let movie of data.Search){
-                const res=await fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=61e4be91`)
+                const res=await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=61e4be91`)
                 const movieData=await res.json();
                 moviesData.push(movieData)
                 renderMovies()
