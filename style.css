@@ -52,6 +52,16 @@ p{
     font-size: 14px;
     line-height: 20px;
 }
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.movie-watchlist-div a{
+    margin-left: 0.5em;
+    color: #363636;
+}
 /* ******* 
 Layout 
 ********** */
@@ -81,7 +91,7 @@ header{
 } */
 
 main{
-    height: 70vh;
+    min-height: 70vh;
     /* background-color: magenta; */
     padding: 0 1em;
 
@@ -103,7 +113,7 @@ main{
     /* padding-left:30px; */
     width: 70%;
     padding: 0.5em 1em 0.5em 3em;
-    margin-top: -3.5em;
+    margin-top: -1em;
 }
 #search-btn{
     padding: 0.5em 1.25em;
@@ -111,16 +121,17 @@ main{
     /* gray/300 */
     border: 1px solid #D1D5DB;
     border-radius: 0px 6px 6px 0px;
-    margin-top: -3.5em;
+    margin-top: -1em;
     cursor: pointer;
 }
 #movies-div{
     /* background-color: aquamarine; */
     height: 90%;
-
+    margin-top: 2em;
 }
 #movies-start{
-    height: 100%;
+    /* height: 100%; */
+    min-height: 60vh;
     background-color: magenta;
     display: flex;
     flex-direction: column;
@@ -131,8 +142,9 @@ main{
 #movies-start h3{
     margin-top: 0.5em;
     color: #DFDDDD;
-    max-width: 350px;
+    max-width: 450px;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 .movie-poster{
     border: 1px solid;
@@ -177,12 +189,13 @@ main{
     margin-bottom: 0;
 }
 
-.movie-watchlist-div button{
+.addbtn{
     border: none; 
     background: #ffffff;
+    cursor: pointer;
     /* padding: 0.3em; */
 }
-.movie-watchlist-div img{
+.addimg{
     max-width: 20px;
     border-radius: 50%;
     /* padding: 0;
@@ -191,4 +204,9 @@ main{
 .movie-watchlist-div{
     margin-left: 20px;
     display: flex;
+    cursor: pointer;
+}
+
+.btn-disable{
+    cursor:not-allowed;
 }

@@ -13,24 +13,23 @@
 <body>
     <div class="container">
         <header>
-            <h1>Find your film</h1>
-            <h3><a href="./watchlist.html">My Watchlist</a></h3> 
+            <h1>My watchlist</h1>
+            <h3><a href="./index.html">Search for movies</a></h3>
         </header>
         <main>
-            <div id="input-div">
-                <!-- <img src="./icons/search.png" alt=""> -->
-                <input id="input-field" type="text" placeholder="Search for a movie" required>
-                <button id="search-btn">Search</button>
-            </div>
+
             <div id="movies-div">
                 <div id="movies-start">
-                    <img src="./icons/movie.png" alt="">
-                    <h3>Start exploring</h3>
+                    <h3>Your watchlist is looking a little empty...</h3>
+                    <div class="movie-watchlist-div">
+                        <img src="./icons/plus.png" alt="">
+                        <a href="./index.html">Let's add some movies!</a>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="./index.js" type="module"></script>
+    <script src="./watchlist.js" type="module"></script>
 </body>
 </html>
